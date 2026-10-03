@@ -151,9 +151,8 @@ VPS:25565/UDP ─┘
 
 ## 安装与运行
 
-下载或保存脚本后：
-
 ```bash
+wget https://raw.githubusercontent.com/Fkstone/Reversix/main/reversix.sh
 chmod +x reversix.sh
 sudo ./reversix.sh
 ```
@@ -391,6 +390,7 @@ curl -v 'http://[HOME_IPV6]:5666/'
 配套卸载脚本：
 
 ```bash
+wget https://raw.githubusercontent.com/Fkstone/Reversix/main/uninstall.sh
 chmod +x uninstall.sh
 sudo ./uninstall.sh
 ```
