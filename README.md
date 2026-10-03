@@ -162,8 +162,8 @@ VPS:25565/UDP ─┘
 下载或保存脚本后：
 
 ```bash
-chmod +x nginx-ipv6-proxy.sh
-sudo ./nginx-ipv6-proxy.sh
+chmod +x reversix.sh
+sudo ./reversix.sh
 ```
 
 首次运行时会自动：
@@ -350,19 +350,6 @@ sudo ufw allow 25565/udp
 
 如果 VPS 使用云厂商安全组，也需要在控制台中开放对应端口。
 
-## IPv6 防火墙
-
-家庭服务器有公网 IPv6 时，建议只允许 VPS 的 IPv6 地址访问相关端口。
-
-例如：
-
-```text
-TCP 5666 ← VPS IPv6 only
-UDP 8001 ← VPS IPv6 only
-```
-
-这样可以避免客户端绕过 VPS 直接访问家庭服务器。
-
 ## 测试
 
 检查 Nginx：
@@ -412,8 +399,8 @@ curl -v 'http://[HOME_IPV6]:5666/'
 配套卸载脚本：
 
 ```bash
-chmod +x uninstall-nginx-proxy.sh
-sudo ./uninstall-nginx-proxy.sh
+chmod +x uninstall.sh
+sudo ./uninstall.sh
 ```
 
 卸载脚本会：
