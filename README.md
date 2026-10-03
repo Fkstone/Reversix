@@ -2,7 +2,7 @@
 
 一个面向 Debian/Ubuntu 双栈 VPS 的 Nginx 反向代理管理脚本，用于将公网 IPv4/IPv6 流量转发到仅有公网 IPv6 的家庭服务器。
 
-适用于家庭 NAS、TUIC、Minecraft、Web 服务以及其他 TCP/UDP 服务。
+适用于家庭 NAS、Minecraft、Web 服务以及其他 TCP/UDP 服务。
 
 ## 功能
 
@@ -125,7 +125,6 @@ VPS:8001/UDP
 
 适合：
 
-- TUIC
 - WireGuard
 - 游戏服务器
 - 自定义 UDP 服务
@@ -287,7 +286,7 @@ http://VPS_IP:5666
 
 即可通过 VPS 访问家庭服务器上的飞牛 NAS。
 
-### TUIC
+### UDP
 
 选择：
 
@@ -454,7 +453,3 @@ curl 'http://[HOME_IPV6]:PORT/'
 本身就无法连接，那么 Nginx 代理也无法工作。
 
 如果家庭宽带公网 IPv6 会变化，建议配合 DDNS 使用。当前脚本使用固定 IPv6 地址生成配置，因此 IPv6 变化后需要更新对应代理配置。
-
-## License
-
-可根据项目需要选择 MIT、GPL-3.0 或其他许可证。
