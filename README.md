@@ -129,14 +129,6 @@ VPS:8001/UDP
 - 游戏服务器
 - 自定义 UDP 服务
 
-UDP 配置不会添加：
-
-```nginx
-proxy_responses 0;
-```
-
-这是为了保持更好的 QUIC/TUIC 兼容性。
-
 ### TCP + UDP
 
 适合需要同时开放 TCP 和 UDP 的服务：
