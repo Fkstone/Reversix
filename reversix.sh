@@ -272,10 +272,14 @@ server {
     listen ${listen_port};
     listen [::]:${listen_port};
 
+    client_max_body_size 0;
+
     location / {
         proxy_pass http://[${BACKEND_IPV6}]:${backend_port};
 
         proxy_http_version 1.1;
+
+        proxy_request_buffering off;
 
         proxy_set_header Host \$http_host;
         proxy_set_header X-Real-IP \$remote_addr;
